@@ -182,6 +182,7 @@ class critical_temperature_impl
 
                 // performs physical simulation of a given SiDB layout at a given input combination
                 const auto sim_result = physical_simulation_of_bdl_iterator(bii);
+                print_sidb_layout(std::cout, sim_result.groundstates()[0]);
 
                 if (sim_result.charge_distributions.empty())
                 {
